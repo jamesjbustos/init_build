@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Button } from "@mui/material";
-import zIndex from "@mui/material/styles/zIndex";
 
 export default function Home() {
   function FadingPictureMontage() {
@@ -129,7 +128,7 @@ export default function Home() {
             fontFamily: "Poppins, sans-serif",
             position: "absolute",
             top: "45px",
-            left: "190px",
+            left: "195px",
             zIndex: 20,
             fontWeight: "bold",
             textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
@@ -156,6 +155,7 @@ export default function Home() {
         >
           <Typography
             variant="body1"
+            align = 'center'
             sx={{
               fontFamily: "Poppins, sans-serif",
               color: "#333",
@@ -163,23 +163,29 @@ export default function Home() {
               fontSize: ".8rem",
             }}
           >
-            Over the course of three months, we worked on two exciting AI projects that pushed the 
-            boundaries of innovation. The first was a traffic light AI model designed to improve traffic flow by intelligently managing 
-            light changes, reducing congestion, and enhancing overall efficiency on the road. The second project 
-            focused on training a robot to walk using AI. This involved building a system capable of 
-            autonomous movement, with realistic walking patterns and collision detection to navigate 
-            its environment seamlessly. Both projects challenged us to explore new techniques and sharpen our problem-solving skills.
+            Over the course of three months, we worked on two exciting AI
+            projects that pushed the boundaries of innovation. The first was a
+            traffic light AI model designed to improve traffic flow by
+            intelligently managing light changes, reducing congestion, and
+            enhancing overall efficiency on the road. The second project focused
+            on training a robot to walk using AI. This involved building a
+            system capable of autonomous movement, with realistic walking
+            patterns and collision detection to navigate its environment
+            seamlessly. Both projects challenged us to explore new techniques
+            and sharpen our problem-solving skills.
           </Typography>
 
           <Button
+            href="/trafficlight"
             variant="contained"
             sx={{
               position: "absolute",
               top: "260px",
-              left: "px", // Aligned with other content
+              left: "25px", // Aligned with other content
               backgroundColor: "#363330", // Dark background to match header
               color: "white",
               fontFamily: "Poppins, sans-serif",
+              fontWeight: "bold",
               textTransform: "none", // Prevents all-caps
               padding: "10px 20px",
               borderRadius: "8px",
@@ -194,14 +200,16 @@ export default function Home() {
             Traffic Light Model
           </Button>
           <Button
+            href="/walkingbot"
             variant="contained"
             sx={{
               position: "absolute",
               top: "260px",
-              left: "240px", // Positioned next to first button
+              left: "225px", // Positioned next to first button
               backgroundColor: "#363330",
               color: "white",
               fontFamily: "Poppins, sans-serif",
+              fontWeight: "bold",
               textTransform: "none",
               padding: "10px 20px",
               borderRadius: "8px",
