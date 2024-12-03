@@ -1,16 +1,17 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { Box, Typography, Button } from "@mui/material";
+import zIndex from "@mui/material/styles/zIndex";
 
 export default function Home() {
   function FadingPictureMontage() {
     const images = [
       "/robotbuild.jpeg",
+      "/traffic1.jpeg",
       "/robotbuild.jpeg",
+      "/traffic1.jpeg",
       "/robotbuild.jpeg",
-      "/robotbuild.jpeg",
-      "/robotbuild.jpeg",
-      "/robotbuild.jpeg",
+      "/traffic1.jpeg",
     ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -40,6 +41,7 @@ export default function Home() {
           overflow: "hidden",
           boxShadow: "0 10px 30px rgba(0,0,0,0.2)", // Subtle shadow
           background: "rgba(255,255,255,0.1)", // Slight background
+          zIndex: 1000,
         }}
       >
         {images.map((image, index) => (
@@ -56,6 +58,7 @@ export default function Home() {
               opacity: currentImageIndex === index ? 1 : 0,
               transition: "opacity 1s ease-in-out",
               borderRadius: "16px", // Match parent's border radius
+              zIndex: 1000,
             }}
           />
         ))}
@@ -80,7 +83,7 @@ export default function Home() {
         sx={{
           width: "100%",
           height: "60px",
-          backgroundColor: "#171410",
+          backgroundColor: "#363330",
           color: "white",
           display: "flex",
           alignItems: "center",
@@ -103,7 +106,7 @@ export default function Home() {
       </Box>
 
       {/* Fading Image Montage */}
-      <FadingPictureMontage />
+      <FadingPictureMontage sx={{ zIndex: 1000 }} />
 
       {/* Content Below the Header */}
       <Box
@@ -115,31 +118,31 @@ export default function Home() {
           width: "100vw",
           marginTop: "60px",
           position: "relative",
-          zIndex: 10,
+          backgroundColor: "#ede2d1",
         }}
       >
         {/* Title */}
         <Typography
-          color="black"
+          color="#363330"
           variant="h4"
           sx={{
             fontFamily: "Poppins, sans-serif",
             position: "absolute",
-            top: "90px",
-            left: "150px",
+            top: "45px",
+            left: "190px",
             zIndex: 20,
             fontWeight: "bold",
             textShadow: "1px 1px 2px rgba(0,0,0,0.1)",
           }}
         >
-          INIT Project Build
+          INIT AI Build
         </Typography>
 
         {/* Description Box */}
         <Box
           sx={{
             position: "absolute",
-            top: "150px", // Positioned below the title
+            top: "105px", // Positioned below the title
             left: "100px",
             width: "400px", // Fixed width, adjust as needed
             minHeight: "325px", // Increase minimum height
@@ -157,29 +160,57 @@ export default function Home() {
               fontFamily: "Poppins, sans-serif",
               color: "#333",
               lineHeight: "1.6",
-              fontSize: "1rem",
+              fontSize: ".8rem",
             }}
           >
-            INIT Project Build is an innovative robotics development initiative
-            focused on creating cutting-edge robotic solutions. Our team
-            combines advanced engineering with creative problem-solving to push
-            the boundaries of robotic technology and design.e
+            Over the course of three months, we worked on two exciting AI projects that pushed the 
+            boundaries of innovation. The first was a traffic light AI model designed to improve traffic flow by intelligently managing 
+            light changes, reducing congestion, and enhancing overall efficiency on the road. The second project 
+            focused on training a robot to walk using AI. This involved building a system capable of 
+            autonomous movement, with realistic walking patterns and collision detection to navigate 
+            its environment seamlessly. Both projects challenged us to explore new techniques and sharpen our problem-solving skills.
           </Typography>
 
           <Button
+            variant="contained"
             sx={{
               position: "absolute",
               top: "260px",
+              left: "px", // Aligned with other content
+              backgroundColor: "#363330", // Dark background to match header
+              color: "white",
+              fontFamily: "Poppins, sans-serif",
+              textTransform: "none", // Prevents all-caps
+              padding: "10px 20px",
+              borderRadius: "8px",
+              boxShadow: "0 4px 6px rgba(0,0,0,0.2)", // Subtle shadow
+              "&:hover": {
+                backgroundColor: "#2c2824", // Slightly lighter on hover
+                transform: "scale(1.05)", // Slight scale effect
+                transition: "transform 0.3s ease",
+              },
             }}
           >
             Traffic Light Model
           </Button>
-
           <Button
+            variant="contained"
             sx={{
               position: "absolute",
               top: "260px",
-              left:"240px"
+              left: "240px", // Positioned next to first button
+              backgroundColor: "#363330",
+              color: "white",
+              fontFamily: "Poppins, sans-serif",
+              textTransform: "none",
+              padding: "10px 20px",
+              borderRadius: "8px",
+              boxShadow: "0 4px 6px rgba(0,0,0,0.2)",
+              "&:hover": {
+                backgroundColor: "#2c2824",
+                transform: "scale(1.05)",
+                transition: "transform 0.3s ease",
+              },
             }}
           >
             Walking Robot
