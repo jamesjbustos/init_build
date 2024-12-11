@@ -172,8 +172,9 @@ export default function Home() {
                   fontFamily: 'Poppins, sans-serif',
                   color: '#333',
                   lineHeight: '1.6',
-                  fontSize: '.8rem',
+                  fontSize: '.9rem',
                   mb: 3,
+                  fontWeight: '500',
                 }}
               >
                 Over the course of three months, we worked on two exciting AI
