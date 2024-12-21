@@ -104,4 +104,55 @@ a {
   html {
     color-scheme: dark;
   }
+
+  .markdown img {
+    border-radius: 0px;
+    max-width: 100%; 
+    width: 35rem; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto; 
+  }
+  .gif-container {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .gif-container img {
+    max-width: 50%; 
+    height: auto;
+    border-radius: 0px;
+  }
+  .three-gif-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1.5rem auto;
+    gap: 1rem; 
+    max-width: 90rem;
+  }
+  
+  .three-gif-container img {
+    height: 15rem;
+    width: auto; 
+    object-fit: cover; 
+    border-radius: 0px;
+  }
+  
+  @media (max-width: 768px) {
+    .three-gif-container {
+      flex-wrap: wrap; 
+      justify-content: center;
+    }
+  
+    .three-gif-container img {
+      height: 8rem;
+      width: auto; 
+      margin-bottom: 1rem;
+    }
+  }
+  
+  
 }
